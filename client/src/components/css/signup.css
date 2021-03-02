@@ -1,0 +1,7 @@
+#signup .flex-vert{
+    display: flex; 
+    flex-direction: column;
+}
+#signup {
+    text-align: center;
+}

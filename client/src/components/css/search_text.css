@@ -1,0 +1,14 @@
+#search_text{
+   width: 100%; 
+   text-align: center;
+}
+
+#search_text label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+ }
+ #search_text label input{
+     width: 230px;
+     margin: 20px auto;
+ }

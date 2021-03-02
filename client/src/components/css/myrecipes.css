@@ -1,0 +1,19 @@
+#myRecipes{
+    text-align: center;
+    border: 1px solid #7A9D96;
+    padding: 20px;
+
+}
+#myRecipes h2{
+    margin-top: 2px;
+}
+#myRecipes ul {
+    list-style-type: none;
+    padding: 0;
+ }
+
+ #myRecipes ul button{
+     width: 100px;
+     padding: 5px;
+     margin: 2px;
+ }

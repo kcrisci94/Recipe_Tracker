@@ -1,0 +1,165 @@
+PRE-LOADED DATA:
+
+   * There are 4 users that are already created:
+
+       1. username: dmalfoy
+          password: password
+       
+       2. username: hpotter
+          password: password
+     
+       3. username: rweasley
+          password: password
+
+       4. username: hgranger
+          password: password
+   
+   * There are 9 recipes in total that are split among the 4 users. 
+   * There are 8 values in the 'favorites' table that are split among the 4 users. 
+
+INSTRUCTIONS:
+
+   LOGIN:
+
+       * When you first load the page, it will be in the 'login' state. You can either log in with a 
+         pre-created user (usernames and passwords are given above, and user verification works), or 
+         you can click the "Sign Up" button to create a new user. 
+
+       * Once you log in (or create a new user), you'll trigger the 'profile' state. This renders 
+         the components that build the user profile: MyRecipes and MyFavorites. Note: if you just 
+         created a new user, these will be empty, but can be added to. MyRecipes represents the 
+         recipes that the user has added, and MyFavorites are recipes that the user likes, but 
+         that didn't create. 
+        
+       * Also, the navigation component loads, allowing you to "Sign Out" and login with a different 
+         user, "Search" the entire recipes table, or if you're in a state other than the profile 
+         state, return you to the "Profile" state. 
+
+   
+   CREATE A RECIPE:
+
+       * To create a recipe, click the "Create New" button on the bottom of the "My Recipes" 
+         section. This will trigger the 'Create Recipe' state.
+           -You must type a name for the recipe. This could be anything. 
+           -To add ingredients, type one ingredient in the box at a time. After each ingredient, 
+            click "Add Ingredient". 
+           -To add instructions, type the instructions 1 at a time in sequence, pressing the 
+            "Add Instruction" button after each one. 
+       * The recipe will only be created once you click the "Create" button. If you make a mistake, 
+         you can always fix it later by updating the recipe. If you click the "Profile" button, in 
+         the navigation, you can see that it was added to the "My Recipes" list. 
+
+   
+   VIEW A RECIPE:
+ 
+       * Click on the button of the recipe that you want to view. These buttons will be in the 
+         "My Recipes" list or "My Favorites" list in the "Profile" state, or the search results
+         list in the "Search" state.
+
+
+   ADD/DELETE RECIPE FROM FAVORITES: 
+ 
+       * To add a recipe to "My Favorites" list, click on the "Search" button in the navigation. 
+         This will trigger the "Search" state. In the search state, the app shows all the recipes
+         that were created by each of the registered users. 
+            -The recipes are displayed 5 at a time. Clicking "Next" will show the next 5 recipes
+             or less if there are fewer than 5 remaining recipes, and clicking "Prev" will go to 
+             the previous 5 recipes. 
+       * Click on a recipe that is not in your "My Recipes" list.
+            -You'll know, because if you click on the button for a recipe and the button at the 
+             bottom says "Update Recipe", that means you clicked on one of the recipes that the 
+             logged in user created, so you'll have to choose a different one. Users cannot
+             modify recipes created by other users.
+       * Click on the button "Favorite Recipe" on the bottom of the page. You'll see the button 
+         change to "Unfavorite Recipe". That means it was added to the favorites list. Clicking
+         "Unfavorite Recipe" will remove it from the favorites list (the favorites table). You 
+         can verify these by clicking the "Profile" button in the navigation and looking at the 
+         "My Favorites" list.
+
+ 
+   SEARCH FOR A RECIPE: 
+     
+       * To search for a recipe, click the "Search" button in the navigation to load the "Search" 
+         state. By default, the app shows all recipes created by all the registered users, but only 
+         5 at a time. To view the next 5, click "Next". To view the previous 5, click "Prev". 
+       * You can view these recipes by clicking on them. Once clicked, you can either update the 
+         recipe (if it was originally created by the logged in user), or add/delete the recipe from 
+         your favorites list. 
+       * In the search bar, you can type the full-name, or part of a name (even a single character)
+         of a recipe, and if what you typed appears in any of the names of the recipes in the 
+         "recipes" table, then only those recipes will be shown. Click "Search" once you typed the
+         name of a recipe you're searching for. 
+
+
+   UPDATE A RECIPE: 
+ 
+       * From the "Profile" state, click on one of the recipes in the "My Recipes" list. The button
+         on the bottom should say "Update Recipe". When you click on that button, you'll trigger 
+         the "Update" state. You can delete specific ingredients/instructions or add 
+         ingredients/instructions (one at a time, clicking "Add Ingredient" or "Add Instruction" 
+         after each one). These changes are kept track of in state, and are not finalized until you 
+         click the "Update" button on the bottom of the page. All changes made where an ingredient
+         or an instruction was added will appear in a bulleted list, so the user knows what they 
+         have done so far.
+       * When you click "Update", you'll trigger the "Recipe" state for the recipe that you just 
+         updated, where you can verify the updates were successfully added.
+
+
+REQUIREMENTS:
+
+   CREATE:
+      1. Users can create user accounts which are stored in the 'users' table.
+      2. Users can create recipes by providing a recipe name, ingredients, and instructions for
+         the recipe. These are stored in the 'recipes' table. 
+      3. Users can add recipes (that they did not create) to their favorites list which is 
+         stored in the 'favorites' table. 
+   READ:
+      1. On authentication, the app reads the username and password from the 'users' table in 
+         order to verify the user's information.
+      2. In rendering the profile state, the app reads from the 'recipes' table and returns 
+         recipes created by the logged in user.
+      3. In rendering the profile state, the app reads from the 'favorites' table and returns
+         all of the recipes that the user has favorited (users can't favorite their own recipes).
+      4. In rendering the search state, the app reads from the 'recipes' table and returns all 
+         the recipes that had been stored by all users. 
+      5. When clicking the search button in the search state, the app reads from the 'recipes' 
+         table and returns all recipes that contain the word or letters that the user entered. 
+         If nothing is entered, then all recipes are returned. 
+   UPDATE: 
+      1. Users can update only the recipes that they created. They can delete 
+         ingredients/instructions and add new ones. 
+   DELETE:
+      1. Users can delete recipes from their favorites list (from the 'favorites' table). They
+         cannot delete recipes from their uploaded recipes (this would cause recipes that were  
+         favorited by other users to no longer exist).  
+
+
+MY EXPERIENCE: 
+
+   I was surprised throughout the entire time that I was building this application, because for 
+   once, it went smoothly. Most of what I tried to do worked out on my first attempt, without 
+   having to spend much time debugging. I had a good idea of the structure of what I was going 
+   to do prior to coding it, and that made everything much easier than I expected. 
+   
+   I started by coding most of the components and base JSX, and added states and props to be 
+   able to see how each of the components rendered. I tackeled one task at a time. First, 
+   getting users to be able to log in, then allowing them to create a recipe, then allowing 
+   them to view their recipe, etc. I targeted each of the required elements of "CRUD" first, 
+   and when I was satisfied that I met the requirements, I started expanding on these features
+   and worked on styling. 
+
+   Some extra features that I added once the base requirements were met are password hashing
+   (using MD5), 'pagination' of search results, and lists of added ingredients/instructions 
+   when creating or updating recipes so that the user can see what they are doing. 
+   
+   Given more time, I would have created a "Comments" table to allow different users to comment 
+   on each others recipes (suggest improvements, likes, etc). I would also figure out how to 
+   incorporate deleting of recipes that were created by the user without deleting these recipes 
+   from other users' favorites lists. In addition, I would figure out how to incorporate "cookies" 
+   to prevent passwords from being exposed (not sure how this is happening anyway) when logging 
+   in or creating new users. Finally, I would add an admin interface that would allow for 
+   CASCADE deletion of items from the "recipes" table and to remove users.   
+
+   
+   
+

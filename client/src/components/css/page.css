@@ -1,0 +1,11 @@
+:root{
+    --header-color: #00303f;
+    --background-color: #96a4c1;
+    --color-1: #e95f4a;
+    --color-2: #c3d2e5;
+    --color-3: #7d6f86;
+  }
+
+  h1{
+      color: var(--color-1);
+  }

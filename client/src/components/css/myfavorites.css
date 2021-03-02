@@ -1,0 +1,20 @@
+#myFavorites{
+    text-align: center;
+    border: 1px solid #7A9D96;
+    padding: 20px;
+}
+#myFavorites h2{
+    margin-top: 2px;
+}
+#myFavorites ul {
+    list-style-type: none;
+    padding: 0;
+ }
+
+ #myFavorites ul button{
+     width: 100px;
+     padding: 5px;
+     margin: 2px;
+ }
+
+ 

@@ -1,0 +1,44 @@
+:root{
+    --header-color: #00303f;
+    --background-color: #96a4c1;
+    --color-1: #f3a195;
+    --color-2: #c3d2e5;
+    --color-3: #7d6f86;
+    --color-4: #e95f4a;
+}
+
+#updateform {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0;
+}
+
+#updateform label{
+    display: flex;
+}
+
+#updateform label button{
+    height: 40px;
+    width: 130px;
+}
+
+#updaterecipe h1 {
+    margin: 0;
+    padding: 10px; 
+ }
+
+#addins {
+    color: red;
+}
+
+#adding {
+    color: red;
+}
+
+#updates{
+    display: flex;
+    justify-content: space-around;
+}

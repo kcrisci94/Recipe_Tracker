@@ -1,0 +1,14 @@
+:root{
+    --header-color: #00303f;
+    --background-color: #96a4c1;
+    --color-1: #f3a195;
+    --color-2: #c3d2e5;
+    --color-3: #7d6f86;
+    --color-4: #e95f4a;
+  }
+
+#recipe_page h1 {
+    margin: 0;
+    padding: 10px; 
+ }
+ 

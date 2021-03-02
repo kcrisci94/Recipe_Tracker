@@ -1,0 +1,18 @@
+input{
+  margin: 20px;
+}
+
+#login .btn{
+     width: 65px;
+     padding: 5px;
+     margin: 4px;
+}
+#login .flex{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+#error {
+  color: red;
+}

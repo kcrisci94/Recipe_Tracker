@@ -1,0 +1,40 @@
+:root{
+    --header-color: #00303f;
+    --background-color: #96a4c1;
+    --color-1: #f3a195;
+    --color-2: #c3d2e5;
+    --color-3: #7d6f86;
+    --color-4: #e95f4a;
+  }
+.center {
+width: 100%;
+text-align: center;
+margin-top: 20px;
+}
+
+#recipe_parts {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#ins {
+    width: 40%;
+}
+#ing{
+    width: 40%;
+}
+
+#recipe_parts .delete {
+    margin-left: 10px;
+}
+
+#recipe_parts .flex-horiz {
+    display: flex;
+}
+#recipe_parts ol button {
+    margin-left: 10px;
+}
+#recipe_parts .output {
+    color: red;
+}
+  
