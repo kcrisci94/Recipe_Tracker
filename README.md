@@ -24,6 +24,13 @@ npm run client
 ```
 
 ## App Info
+The init.sql file contains the testing data in order to see how the application works. 
+Open mysql and run source init.sql
+
+Both the client and the server dependencies must be installed (see above)
+Once installed use:
+npm run dev 
+to start the application 
 
 ### Author
 
