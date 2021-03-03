@@ -1,6 +1,6 @@
-# React Express Starter Pack
+# React Express Recipe Tracker
 
-> Create full stack apps with React and Express. Run your client and server with a single command. 
+> A full stack application to store and search for recipes. 
 
 ## Quick Start
 
